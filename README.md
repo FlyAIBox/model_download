@@ -55,7 +55,7 @@ DEST_DIR=/work/home/yiziqinx/ai4s/model \
 CONCURRENCY=2 \
 PER_REPO_WORKERS=8 \
 RESERVE_SPACE=100G \
-nohup ./run_model_download.sh > nohup_model_download_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+nohup bash ./run_model_download.sh > nohup_model_download_$(date +%Y%m%d_%H%M%S).log 2>&1 &
 ```
 
 Defaults:
@@ -67,15 +67,66 @@ Defaults:
 
 ## Progress and resume
 
+### Check running tasks
+
+Do not use `run_model_download.sh --status` while a download is still running;
+that command refreshes state. Query the process list and SQLite directly instead.
+
+Check whether the scheduler is still running:
+
 ```bash
+ps -u "$USER" -o pid,ppid,stat,etime,pcpu,pmem,cmd | grep -E 'run_model_download|download_models.py' | grep -v grep
+```
+
+If it is still running in the background, you should see a parent process like:
+
+```text
+python .../download_models.py --manifest ...
+```
+
+and several child processes like:
+
+```text
+python .../download_models.py _download_one ...
+```
+
+Check live status counts from the state database:
+
+```bash
+cd /work/home/yiziqinx/ai4s/model_download
+./.venv/bin/python - <<'PY'
+import sqlite3
+p='/work/home/yiziqinx/ai4s/model/_download_state/downloads.sqlite3'
+con=sqlite3.connect(p)
+for status, count in con.execute("select status, count(*) from downloads group by status"):
+    print(status, count)
+PY
+```
+
+Follow the main nohup log:
+
+```bash
+cd /work/home/yiziqinx/ai4s/model_download
+tail -f nohup_model_download_*.log
+```
+
+Follow a single model log:
+
+```bash
+tail -f /work/home/yiziqinx/ai4s/model/_download_state/logs/model-001.log
+```
+
+After the run has finished, you can also use:
+
+```bash
+cd /work/home/yiziqinx/ai4s/model_download
 DEST_DIR=/work/home/yiziqinx/ai4s/model ./run_model_download.sh --status
-tail -f /work/home/yiziqinx/ai4s_models/_download_state/logs/model-001.log
 ```
 
 State and logs are written under:
 
 ```text
-/work/home/yiziqinx/ai4s_models/_download_state/
+/work/home/yiziqinx/ai4s/model/_download_state/
 ```
 
 Important files:
