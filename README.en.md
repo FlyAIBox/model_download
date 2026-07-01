@@ -67,6 +67,33 @@ Defaults:
 - `RESERVE_SPACE=100G`: stop launching/terminate active downloads when free
   space would drop to the reserve threshold.
 
+## Network access
+
+If `huggingface.co` is unreachable but `hf-mirror.com` works, set `HF_ENDPOINT`
+to use the mirror and resume downloading (checkpoint resume still applies):
+
+```bash
+cd /work/home/yiziqinx/ai4s/model_download
+
+HF_ENDPOINT=https://hf-mirror.com \
+DEST_DIR=/work/home/yiziqinx/ai4s/model \
+CONCURRENCY=1 \
+PER_REPO_WORKERS=2 \
+RESERVE_SPACE=100G \
+nohup ./run_model_download.sh > nohup_model_download_hfmirror_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+```
+
+If neither site is reachable, configure an HTTP/HTTPS proxy on the server,
+for example:
+
+```bash
+export HTTPS_PROXY=http://your-proxy-host:port
+export HTTP_PROXY=http://your-proxy-host:port
+```
+
+Then rerun the same resume command (with or without `HF_ENDPOINT`, depending on
+which endpoint you can reach).
+
 ## Progress and resume
 
 ### Check running tasks

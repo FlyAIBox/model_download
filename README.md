@@ -64,6 +64,30 @@ nohup bash ./run_model_download.sh > nohup_model_download_$(date +%Y%m%d_%H%M%S)
 | `PER_REPO_WORKERS` | `8` | 每个 Hugging Face 仓库内部的并行 worker 数 |
 | `RESERVE_SPACE` | `100G` | 磁盘剩余空间低于此阈值时，停止启动新任务并终止进行中的下载 |
 
+## 网络访问
+
+若 `huggingface.co` 不通，但 `hf-mirror.com` 可用，可通过 `HF_ENDPOINT` 使用镜像继续下载（断点续传同样有效）：
+
+```bash
+cd /work/home/yiziqinx/ai4s/model_download
+
+HF_ENDPOINT=https://hf-mirror.com \
+DEST_DIR=/work/home/yiziqinx/ai4s/model \
+CONCURRENCY=1 \
+PER_REPO_WORKERS=2 \
+RESERVE_SPACE=100G \
+nohup ./run_model_download.sh > nohup_model_download_hfmirror_$(date +%Y%m%d_%H%M%S).log 2>&1 &
+```
+
+若两个站点均无法访问，需在服务器上配置 HTTP/HTTPS 代理，例如：
+
+```bash
+export HTTPS_PROXY=http://你的代理地址:端口
+export HTTP_PROXY=http://你的代理地址:端口
+```
+
+然后再执行同样的恢复/续传命令（可保留 `HF_ENDPOINT`，或省略以使用 Hugging Face 官方地址）。
+
 ## 进度查看与断点续传
 
 ### 查看正在运行的任务
