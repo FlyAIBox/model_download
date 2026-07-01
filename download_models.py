@@ -1,10 +1,12 @@
 #!/usr/bin/env python3
 """
 Concurrent resumable downloader for AI4S model manifests.
+AI4S 模型清单的并发、可断点续传下载器。
 
 The parent process schedules one repository per child process. This keeps state
 tracking simple and lets the disk-space guard stop active downloads before the
 filesystem is exhausted.
+父进程为每个仓库启动一个子进程，便于状态追踪，并在磁盘空间不足前终止进行中的下载。
 """
 
 from __future__ import annotations
@@ -27,15 +29,19 @@ import traceback
 from typing import Dict, Iterable, List, Optional, Tuple
 
 
+# 默认保留磁盘空间阈值；剩余空间低于此值时停止下载
 DEFAULT_RESERVE = "100G"
+# 调度器打印进度的默认间隔（秒）
 DEFAULT_PROGRESS_INTERVAL = 30
 
 
 def utcnow() -> str:
+    # 返回当前 UTC 时间的 ISO 8601 字符串
     return dt.datetime.now(dt.timezone.utc).isoformat(timespec="seconds")
 
 
 def parse_size(value: str) -> int:
+    # 将人类可读的大小字符串（如 "100G"、"5GB"）解析为字节数
     text = str(value).strip().upper().replace("IB", "B")
     units = {
         "B": 1,
@@ -55,6 +61,7 @@ def parse_size(value: str) -> int:
 
 
 def human_bytes(num: int) -> str:
+    # 将字节数格式化为人类可读字符串（B/KB/MB/GB/TB/PB）
     value = float(num)
     for unit in ("B", "KB", "MB", "GB", "TB", "PB"):
         if abs(value) < 1024.0 or unit == "PB":
@@ -64,6 +71,7 @@ def human_bytes(num: int) -> str:
 
 
 def safe_name(text: str) -> str:
+    # 将任意文本转为安全的文件/目录名（仅保留字母数字及 -_.，其余替换为 _）
     keep = []
     for ch in str(text):
         if ch.isalnum() or ch in ("-", "_", "."):
@@ -75,11 +83,13 @@ def safe_name(text: str) -> str:
 
 
 def ensure_dir(path: Path) -> Path:
+    # 递归创建目录（若已存在则跳过）
     path.mkdir(parents=True, exist_ok=True)
     return path
 
 
 def read_env_file(path: Optional[Path]) -> Dict[str, str]:
+    # 从 .env 风格配置文件读取键值对（忽略空行与 # 注释行）
     values: Dict[str, str] = {}
     if not path:
         return values
@@ -98,6 +108,7 @@ def read_env_file(path: Optional[Path]) -> Dict[str, str]:
 
 
 def merged_env(config: Dict[str, str]) -> Dict[str, str]:
+    # 合并系统环境变量与配置文件，并同步各平台 Token 的别名
     env = os.environ.copy()
     for key, value in config.items():
         if value and key not in env:
