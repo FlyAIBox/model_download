@@ -1,0 +1,65 @@
+﻿id,name,provider,repo_type,repo_id,url,org,domain,featured
+model-001,昆虫图像识别模型,modelscope,model,Genius-Society/insecta,https://modelscope.cn/models/Genius-Society/insecta,天才俱乐部（Genius-Society）,生命信息,是
+model-002,女娲多模态医学影像基础模型,modelscope,model,ai4s/nuwa-medical-imageing,https://modelscope.cn/models/ai4s/nuwa-medical-imageing,星河启智（ai4s）,生命信息,否
+model-003,女娲基因导航大模型（SCRIPT）,modelscope,model,ai4s/nuwa-script,https://modelscope.cn/models/ai4s/nuwa-script,星河启智（ai4s）,生命信息,否
+model-004,医学影像模态转换：PET重建,modelscope,model,ai4s/nuwa-pet,https://modelscope.cn/models/ai4s/nuwa-pet,星河启智（ai4s）,生命信息,否
+model-005,bioemu,modelscope,model,ai4s/bioemu,https://modelscope.cn/models/ai4s/bioemu,星河启智（ai4s）,生命信息,否
+model-006,dynamicPDB 4d diffusion application,modelscope,model,ai4s/dynamicPDB_4d_diffusion_application,https://modelscope.cn/models/ai4s/dynamicPDB_4d_diffusion_application,星河启智（ai4s）,生命信息,否
+model-007,EigenFold,modelscope,model,ai4s/EigenFold,https://modelscope.cn/models/ai4s/EigenFold,星河启智（ai4s）,生命信息,否
+model-008,ESMFold,modelscope,model,ai4s/ESMFold,https://modelscope.cn/models/ai4s/ESMFold,星河启智（ai4s）,生命信息,否
+model-009,Genos-1.2B,modelscope,model,zhejianglab/Genos-1.2B,https://modelscope.cn/models/zhejianglab/Genos-1.2B,之江实验室（zhejianglab）,生命信息,否
+model-010,Genos-1.2B,modelscope,model,BGI-HangzhouAI/Genos-1.2B,https://modelscope.cn/models/BGI-HangzhouAI/Genos-1.2B,Genos（BGI-HangzhouAI）,生命信息,是
+model-011,Genos-10B,modelscope,model,zhejianglab/Genos-10B,https://modelscope.cn/models/zhejianglab/Genos-10B,之江实验室（zhejianglab）,生命信息,否
+model-012,Genos-10B,modelscope,model,BGI-HangzhouAI/Genos-10B,https://modelscope.cn/models/BGI-HangzhouAI/Genos-10B,Genos（BGI-HangzhouAI）,生命信息,是
+model-013,Genos-10B-v2,modelscope,model,zhejianglab/Genos-10B-v2,https://modelscope.cn/models/zhejianglab/Genos-10B-v2,之江实验室（zhejianglab）,生命信息,否
+model-014,Genos-Megatron-1.2B,modelscope,model,BGI-HangzhouAI/Genos-Megatron-1.2B,https://modelscope.cn/models/BGI-HangzhouAI/Genos-Megatron-1.2B,Genos（BGI-HangzhouAI）,生命信息,是
+model-015,Genos-Megatron-10B,modelscope,model,BGI-HangzhouAI/Genos-Megatron-10B,https://modelscope.cn/models/BGI-HangzhouAI/Genos-Megatron-10B,Genos（BGI-HangzhouAI）,生命信息,是
+model-016,HelixFold3,modelscope,model,ai4s/HelixFold3,https://modelscope.cn/models/ai4s/HelixFold3,星河启智（ai4s）,生命信息,否
+model-017,OmegaFold,modelscope,model,ai4s/OmegaFold,https://modelscope.cn/models/ai4s/OmegaFold,星河启智（ai4s）,生命信息,否
+model-018,OpenFold3,modelscope,model,OpenFold/OpenFold3,https://modelscope.cn/models/OpenFold/OpenFold3,OpenFold,生命信息,是
+model-019,PepMLM,modelscope,model,ai4s/PepMLM,https://modelscope.cn/models/ai4s/PepMLM,星河启智（ai4s）,生命信息,否
+model-020,Protenix,modelscope,model,ai4s/Protenix,https://modelscope.cn/models/ai4s/Protenix,星河启智（ai4s）,生命信息,否
+model-021,ProtTrans,modelscope,model,ai4s/ProtTrans,https://modelscope.cn/models/ai4s/ProtTrans,星河启智（ai4s）,生命信息,否
+model-022,Uni-Fold,modelscope,model,ai4s/Uni-Fold,https://modelscope.cn/models/ai4s/Uni-Fold,星河启智（ai4s）,生命信息,否
+model-023,Uni-Fold-Monomer 开源的蛋白质单体结构预测模型,modelscope,model,DPTech/uni-fold-monomer,https://modelscope.cn/models/DPTech/uni-fold-monomer,深势科技（DPTech）,生命信息,是
+model-024,Uni-Fold-Multimer 开源的蛋白质复合物结构预测模型,modelscope,model,DPTech/uni-fold-multimer,https://modelscope.cn/models/DPTech/uni-fold-multimer,深势科技（DPTech）,生命信息,是
+model-025,分子动力学轨迹生成模型（MDGen）,modelscope,model,ai4s/MDGEN,https://modelscope.cn/models/ai4s/MDGEN,星河启智（ai4s）,材料科学,否
+model-026,燧人大模型-沸点,modelscope,model,ai4s/boiling_point,https://modelscope.cn/models/ai4s/boiling_point,星河启智（ai4s）,材料科学,否
+model-027,燧人大模型-临界密度,modelscope,model,ai4s/critical_density_3d,https://modelscope.cn/models/ai4s/critical_density_3d,星河启智（ai4s）,材料科学,否
+model-028,燧人大模型-临界体积,modelscope,model,ai4s/critical_volume,https://modelscope.cn/models/ai4s/critical_volume,星河启智（ai4s）,材料科学,否
+model-029,燧人大模型-临界压强,modelscope,model,ai4s/critical_pressure_3d,https://modelscope.cn/models/ai4s/critical_pressure_3d,星河启智（ai4s）,材料科学,否
+model-030,燧人大模型-临界压缩系数,modelscope,model,ai4s/critical_compressibility,https://modelscope.cn/models/ai4s/critical_compressibility,星河启智（ai4s）,材料科学,否
+model-031,燧人大模型-气体扩散系数,modelscope,model,ai4s/diffusion_coefficient_in_air,https://modelscope.cn/models/ai4s/diffusion_coefficient_in_air,星河启智（ai4s）,材料科学,否
+model-032,燧人大模型-燃烧焓,modelscope,model,ai4s/enthalpy_of_combustion,https://modelscope.cn/models/ai4s/enthalpy_of_combustion,星河启智（ai4s）,材料科学,否
+model-033,燧人大模型-热膨胀系数,modelscope,model,ai4s/coefficient_of_thermal_expansion_of_liquid,https://modelscope.cn/models/ai4s/coefficient_of_thermal_expansion_of_liquid,星河启智（ai4s）,材料科学,否
+model-034,燧人大模型-热容,modelscope,model,ai4s/heat_capacity_of_gas,https://modelscope.cn/models/ai4s/heat_capacity_of_gas,星河启智（ai4s）,材料科学,否
+model-035,燧人大模型-溶解度常数,modelscope,model,ai4s/solubility_parameter,https://modelscope.cn/models/ai4s/solubility_parameter,星河启智（ai4s）,材料科学,否
+model-036,燧人大模型-闪点,modelscope,model,ai4s/flash_point,https://modelscope.cn/models/ai4s/flash_point,星河启智（ai4s）,材料科学,否
+model-037,燧人大模型-生成焓,modelscope,model,ai4s/enthalpy_of_formation,https://modelscope.cn/models/ai4s/enthalpy_of_formation,星河启智（ai4s）,材料科学,否
+model-038,燧人大模型-粘度,modelscope,model,ai4s/viscosity_of_gas,https://modelscope.cn/models/ai4s/viscosity_of_gas,星河启智（ai4s）,材料科学,否
+model-039,燧人大模型-蒸发焓,modelscope,model,ai4s/enthalpy_of_vaporization,https://modelscope.cn/models/ai4s/enthalpy_of_vaporization,星河启智（ai4s）,材料科学,否
+model-040,燧人大模型-蒸气压,modelscope,model,ai4s/vapor_pressure,https://modelscope.cn/models/ai4s/vapor_pressure,星河启智（ai4s）,材料科学,否
+model-041,Intern-S1 书生·科学多模态大模型,modelscope,model,Shanghai_AI_Laboratory/Intern-S1,https://modelscope.cn/models/Shanghai_AI_Laboratory/Intern-S1,上海人工智能实验室（Shanghai_AI_Laboratory）,材料科学,是
+model-042,Intern-S1-FP8,modelscope,model,Shanghai_AI_Laboratory/Intern-S1-FP8,https://modelscope.cn/models/Shanghai_AI_Laboratory/Intern-S1-FP8,上海人工智能实验室（Shanghai_AI_Laboratory）,材料科学,是
+model-043,Intern-S1-mini,modelscope,model,Shanghai_AI_Laboratory/Intern-S1-mini,https://modelscope.cn/models/Shanghai_AI_Laboratory/Intern-S1-mini,上海人工智能实验室（Shanghai_AI_Laboratory）,材料科学,是
+model-044,Intern-S1-mini-FP8,modelscope,model,Shanghai_AI_Laboratory/Intern-S1-mini-FP8,https://modelscope.cn/models/Shanghai_AI_Laboratory/Intern-S1-mini-FP8,上海人工智能实验室（Shanghai_AI_Laboratory）,材料科学,是
+model-045,Intern-S1-Pro 多模态科学推理,modelscope,model,Shanghai_AI_Laboratory/Intern-S1-Pro,https://modelscope.cn/models/Shanghai_AI_Laboratory/Intern-S1-Pro,上海人工智能实验室（Shanghai_AI_Laboratory）,材料科学,是
+model-046,Intern-S1-Pro-BF16,modelscope,model,Shanghai_AI_Laboratory/Intern-S1-Pro-BF16,https://modelscope.cn/models/Shanghai_AI_Laboratory/Intern-S1-Pro-BF16,上海人工智能实验室（Shanghai_AI_Laboratory）,材料科学,是
+model-047,SISSO,modelscope,model,ai4s/sisso,https://modelscope.cn/models/ai4s/sisso,星河启智（ai4s）,材料科学,否
+model-048,UniSim,modelscope,model,ai4s/UniSim,https://modelscope.cn/models/ai4s/UniSim,星河启智（ai4s）,材料科学,否
+model-049,伏羲超分模型,modelscope,model,ai4s/fuxi-sr,https://modelscope.cn/models/ai4s/fuxi-sr,星河启智（ai4s）,地球科学,否
+model-050,伏羲天气预报：伏羲中期气象大模型,modelscope,model,ai4s/fuxi2,https://modelscope.cn/models/ai4s/fuxi2,星河启智（ai4s）,地球科学,否
+model-051,全球大气污染物离线耦合预报模型,modelscope,model,ai4s/Offline-Meteorology-Pollutant-Coupled-Pollution-Forecasting-Model,https://modelscope.cn/models/ai4s/Offline-Meteorology-Pollutant-Coupled-Pollution-Forecasting-Model,星河启智（ai4s）,地球科学,否
+model-052,用于卫星观测资料同化的通用深度学习框架,modelscope,model,ai4s/A_General_Deep_Learning_Framework_for_Satellite_Data_Assimilation,https://modelscope.cn/models/ai4s/A_General_Deep_Learning_Framework_for_Satellite_Data_Assimilation,星河启智（ai4s）,地球科学,否
+model-053,ar_segmentation_surya,modelscope,model,nasa-ibm-ai4science/ar_segmentation_surya,https://modelscope.cn/models/nasa-ibm-ai4science/ar_segmentation_surya,nasa-ibm-ai4science,地球科学,是
+model-054,GraphCast,github,model,google-deepmind/graphcast,https://github.com/google-deepmind/graphcast,Google DeepMind,地球科学,是
+model-055,Surya-1.0,modelscope,model,nasa-ibm-ai4science/Surya-1.0,https://modelscope.cn/models/nasa-ibm-ai4science/Surya-1.0,nasa-ibm-ai4science,地球科学,是
+model-056,DoMINO DrivAerML,huggingface,model,nvidia/domino_drivaerml,https://huggingface.co/nvidia/domino_drivaerml,NVIDIA,工业仿真,是
+model-057,Transolver DrivAerML,huggingface,model,nvidia/transolver_drivaerml,https://huggingface.co/nvidia/transolver_drivaerml,NVIDIA,工业仿真,是
+model-058,GeoTransolver DrivAerML,huggingface,model,nvidia/geotransolver_drivaerml,https://huggingface.co/nvidia/geotransolver_drivaerml,NVIDIA,工业仿真,是
+model-059,XMeshGraphNet DrivAerML Surface,huggingface,model,nvidia/xmgn_drivaerml_surface,https://huggingface.co/nvidia/xmgn_drivaerml_surface,NVIDIA,工业仿真,是
+model-060,FIGConvNet DrivAerML Surface,huggingface,model,nvidia/figconvnet_drivaerml_surface,https://huggingface.co/nvidia/figconvnet_drivaerml_surface,NVIDIA,工业仿真,是
+model-061,Fundamental Physics Neural Operators,huggingface,model,delta-lab-ai/fundamental-physics-neural-operators,https://huggingface.co/delta-lab-ai/fundamental-physics-neural-operators,Delta Lab AI,工业仿真,是
+model-062,DMD-Neural-Operator,huggingface,model,ScientificOperator/DMD-Neural-Operator,https://huggingface.co/ScientificOperator/DMD-Neural-Operator,ScientificOperator,工业仿真,是
+model-063,Transformer-PINN,huggingface,model,guanwencan/Transformer-PINN,https://huggingface.co/guanwencan/Transformer-PINN,guanwencan,工业仿真,是
+model-064,PINN-Collection,huggingface,model,sr5434/PINN-Collection,https://huggingface.co/sr5434/PINN-Collection,sr5434,工业仿真,是
